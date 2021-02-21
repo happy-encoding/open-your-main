@@ -6,10 +6,15 @@
 # @File : link_list.py
 # @Software: PyCharm
 class Node:
-    def __init__(self):
-        self.node = None
-    def add(self):
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+    def add(self, item):
         pass
+
+    def append(self, item):
+        pass
+
     def remove(self):
         pass
-    
