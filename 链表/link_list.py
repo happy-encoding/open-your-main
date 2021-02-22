@@ -33,7 +33,9 @@ class SingleLink:
         :param item: 节点对象
         :return: None
         """
-        pass
+        node = Node(item)
+        node.next = self.head
+        self.head = node
 
     def append(self, item):
         """
@@ -62,4 +64,11 @@ class SingleLink:
         pass
 
     def travel(self):
-        pass
+        """
+        遍历整个链表
+        :return:
+        """
+        cur = self.head
+        while cur:
+            print(cur.value, end="")
+            cur = cur.next
