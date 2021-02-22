@@ -8,10 +8,24 @@
 """
 python列表实现单链表
 """
+
+
 class Node:
+    """节点类"""
+
     def __init__(self, value):
         self.value = value
         self.next = None
+
+
+class SingleLink:
+    """单链表类"""
+
+    def __init__(self):
+        """
+        初始化一个空链表
+        """
+        self.head = None
 
     def add(self, item):
         """
@@ -37,11 +51,15 @@ class Node:
         判断链表是否为空
         :return: None
         """
-        pass
+        # 如果头结点为空，则可以证明整个链表为空
+        return self.head == None
 
     def len(self):
         """
         判断链表长度
         :return: 链表长度
         """
+        pass
+
+    def travel(self):
         pass
