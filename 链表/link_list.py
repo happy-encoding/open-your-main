@@ -43,7 +43,11 @@ class SingleLink:
         :param item: 需要增加的节点对象
         :return: None
         """
-        pass
+        node = Node(item)
+        cur = self.head
+        while cur.next:
+            cur = cur.next
+        cur.next = node
 
     def remove(self):
         pass
