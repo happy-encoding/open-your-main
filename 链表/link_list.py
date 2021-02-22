@@ -44,6 +44,17 @@ class SingleLink:
         :return: None
         """
         node = Node(item)
+        # 情况1：
+        """
+        if self.is_empty():
+            self.add(item)
+            return
+        """
+        if self.head == None:
+            self.head = node
+            return
+
+            # 情况2：
         cur = self.head
         while cur.next:
             cur = cur.next
@@ -65,7 +76,12 @@ class SingleLink:
         判断链表长度
         :return: 链表长度
         """
-        pass
+        i = 0
+        cur = self.head
+        while cur:
+            i += 1
+            cur = cur.next
+        return i
 
     def travel(self):
         """
@@ -74,5 +90,16 @@ class SingleLink:
         """
         cur = self.head
         while cur:
-            print(cur.value, end="")
+            print(cur.value, end="  ")
             cur = cur.next
+        print()
+
+if __name__ == '__main__':
+    s =SingleLink()
+    print(s.is_empty())
+    s.add(1)
+    s.add(2)
+    s.append(3)
+    s.travel()
+    print(s.is_empty())
+    print(s.len())
