@@ -94,8 +94,14 @@ class SingleLink:
             cur = cur.next
         print()
 
+    def insert(self, index, item):
+        node = Node(item)
+        if self.head == None:
+            self.add(node)
+
+
 if __name__ == '__main__':
-    s =SingleLink()
+    s = SingleLink()
     print(s.is_empty())
     s.add(1)
     s.add(2)
