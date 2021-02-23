@@ -60,8 +60,23 @@ class SingleLink:
             cur = cur.next
         cur.next = node
 
-    def remove(self):
-        pass
+    def remove(self, item):
+        """
+        移除第一个item
+        :param item: 要移除的元素
+        :return: None
+        """
+        cur = self.head
+        cur2 = cur.next
+        if cur.value == item:
+            self.head = cur2
+            return
+        while cur2:
+            if cur2.value == item:
+                cur.next = cur2.next
+                return
+            cur = cur.next
+            cur2 = cur.next
 
     def is_empty(self):
         """
@@ -104,8 +119,15 @@ if __name__ == '__main__':
     s = SingleLink()
     print(s.is_empty())
     s.add(1)
-    s.add(2)
+    s.append(2)
     s.append(3)
+    s.append(3)
+    s.append(3)
+    s.append(3)
+    s.append(2)
+    s.append(2)
     s.travel()
     print(s.is_empty())
     print(s.len())
+    s.remove(2)
+    s.travel()
