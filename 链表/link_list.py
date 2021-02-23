@@ -111,8 +111,17 @@ class SingleLink:
 
     def insert(self, index, item):
         node = Node(item)
-        if self.head == None:
+        cur = self.head
+        i = 0
+        if cur == None:
             self.add(node)
+        while cur:
+            i += 1
+            if i == index:
+                node.next = cur.next
+                cur.next = node
+                return
+            cur = cur.next
 
 
 if __name__ == '__main__':
@@ -130,4 +139,6 @@ if __name__ == '__main__':
     print(s.is_empty())
     print(s.len())
     s.remove(2)
+    s.travel()
+    s.insert(2, 5)
     s.travel()
