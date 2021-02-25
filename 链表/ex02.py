@@ -17,14 +17,17 @@ class Node:
 
 
 class Solution:
-    def get_linklist_head(self,head):
+
+    def get_linklist_head(self, head):
+        # 定义两个游标
         cur = head
         pre = None
-        while True:
+        while cur:
+            # 记录下一个要操作的节点
             next_node = cur.next
+            # 反转当前节点
             cur.next = pre
+            # 同时移动游标
             pre = cur
             cur = next_node
         return pre
-
-
