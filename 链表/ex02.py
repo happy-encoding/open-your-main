@@ -31,3 +31,12 @@ class Solution:
             pre = cur
             cur = next_node
         return pre
+
+
+if __name__ == '__main__':
+    head = Node(100)
+    head.next = Node(200)
+    head.next.next = Node(300)
+    s = Solution()
+    new_head = s.get_linklist_head(head)
+    print(new_head.value)
