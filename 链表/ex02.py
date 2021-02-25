@@ -40,3 +40,8 @@ if __name__ == '__main__':
     s = Solution()
     new_head = s.get_linklist_head(head)
     print(new_head.value)
+    # 遍历反转后的链表
+    while new_head:
+        print(new_head.value, end="  ")
+        new_head = new_head.next
+    print()
