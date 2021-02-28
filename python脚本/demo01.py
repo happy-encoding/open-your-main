@@ -22,8 +22,9 @@ import os, sys
 # print(msg)
 
 # 查看当前工作目录
-msg = os.getcwd()
+# msg = os.getcwd()
 # msg = os.path.dirname(__file__)
-print(msg)
-os.chdir("D:")
+# print(msg)
+# os.chdir("D:")
 print(os.getcwd())
+
