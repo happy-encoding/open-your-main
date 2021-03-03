@@ -6,5 +6,7 @@
 # @File : demo02.py
 # @Software: PyCharm
 import sys
-
+# 获取参数  （列表）
 print(sys.argv)
+# 返回模块可以搜索到的环境变量
+print(sys.path)
