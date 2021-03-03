@@ -18,7 +18,9 @@ print(sys.path)
 print(sys.platform)
 
 # sys.exit() 异常退出
-for i in range(5):
-    if i ==3:
-        sys.exit(3)
-    print(i)
+# for i in range(5):
+#     if i ==3:
+#         sys.exit(3)
+#     print(i)
+# 获取python解释器版本
+print(sys.version)
