@@ -5,7 +5,7 @@
 # @Email : gaohan1130@163.com
 # @File : demo01.py
 # @Software: PyCharm
-import os, sys
+import os
 
 # cmd 执行命令
 #  1.有返回值
