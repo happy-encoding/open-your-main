@@ -8,3 +8,8 @@
 """
 向测试网站发请求，确认请求头中User-Agent？
 """
+import requests
+
+url = "http://httpbin.org/get"
+html = requests.get(url).text
+print(html)
