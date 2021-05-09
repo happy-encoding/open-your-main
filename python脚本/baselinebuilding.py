@@ -35,11 +35,11 @@ class BaselineBuild(object):
             return 1
         build_node = self.get_build_node()
         tool_node = build_node.find(node)
-        return tool_node
+        return tool_node.text
 
     def generate_tool_cmd(self, node):
         filename = node.attrib["name"].strip()
-        print(filename)
+        # print(filename)
         cmd = "python3 %s" % filename
         for para in node:
             if para.tag == "opt":
@@ -55,4 +55,4 @@ class BaselineBuild(object):
 
 if __name__ == '__main__':
     b = BaselineBuild("build_para.xml")
-    b.get_child_node("./building/tool")
+    print(b.get_child_node("./building/tool"))
